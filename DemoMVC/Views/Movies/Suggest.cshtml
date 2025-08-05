@@ -1,0 +1,15 @@
+@model DemoMVC.Models.Movie
+
+<h1>Sugerir Película</h1>
+
+<form asp-action="Suggest" method="post">
+    <label>Título:</label>
+    <input asp-for="Title" /><br/>
+
+    <label>Categoría:</label>
+    <input asp-for="Category" /><br/>
+
+    <button type="submit">Enviar</button>
+</form>
+
+<p style="color:red">@ViewBag.Error</p>

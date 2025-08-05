@@ -1,0 +1,11 @@
+@model List<DemoMVC.Models.Movie>
+
+<h1>Películas de @ViewBag.Category</h1>
+<ul>
+@foreach (var m in Model)
+{
+    <li>@m.Title</li>
+}
+</ul>
+
+<a href="/Movies/Suggest"><button>Agregar Película</button></a>

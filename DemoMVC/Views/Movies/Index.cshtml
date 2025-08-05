@@ -1,0 +1,11 @@
+@model List<string>
+
+<h1>Categorías</h1>
+<ul>
+@foreach (var c in Model)
+{
+    <li>
+        <a href="/Movies/Category/@Uri.EscapeDataString(c)">@c</a>
+    </li>
+}
+</ul>
