@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Registro de Jugadores de Counter Strike</title>
+  <style>
+    body { font-family: Arial; padding: 20px; }
+    form { max-width: 300px; margin: auto; display: flex; flex-direction: column; gap: 10px; }
+    input, select, button { padding: 5px; }
+    #mensaje { margin-top: 20px; font-weight: bold; }
+  </style>
+</head>
+<body>
+
+<h2 style="text-align: center;">Registro de Jugadores Counter Strike</h2>
+
+<form id="registroForm">
+    <br>
+  <label>Nombre:
+    <input type="text" id="nombre" required>
+  </label>
+  
+  <label>Edad:
+    <input type="number" id="edad" required>
+  </label>
+  
+  <label>Frecuencia de juego:
+    <select id="frecuencia" required>
+      <option value="">Seleccione</option>
+      <option value="Diario">Diario</option>
+      <option value="Semanal">Semanal</option>
+      <option value="Mensual">Mensual</option>
+    </select>
+  </label>
+  
+  <label>Años de juego:
+    <input type="number" id="años" required>
+  </label>
+  
+  <button type="submit">Enviar</button>
+</form>
+
+<div id="mensaje" style="text-align: center;"></div>
+
+<script>
+  const form = document.getElementById('registroForm');
+  const mensaje = document.getElementById('mensaje');
+
+  form.addEventListener('submit', function(event) {
+    event.preventDefault();
+    const nombre = document.getElementById('nombre').value;
+    mensaje.textContent = `Gracias ${nombre} por haberte registrado a nuestro juego Counter Strike`;
+    form.reset();
+  });
+</script>
+
+</body>
+</html>
